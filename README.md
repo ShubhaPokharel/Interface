@@ -133,3 +133,6 @@ class TestClient2{
   }
   
 }
+
+
+We have 2 implemintation classes, so we took 2 methods. If we have 5 implemintation classes, we use 5 methods. If we want one method to handle all the implemintation classes, we can use "Greeting". "Greeting" is like the parent type for all the implemintation classes.
