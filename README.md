@@ -11,6 +11,15 @@
 
 3. Interface variables re by default public, static and final.
 
+
+##### Quick remainder:
+
+###### class extends class
+
+###### class implements interface
+
+###### interface implements interface
+
 example:
 
 interface Greeting{
