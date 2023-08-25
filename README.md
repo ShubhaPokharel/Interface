@@ -251,3 +251,28 @@ class Test implements It3{
 }
 
 
+Case 2- One interface can extend multiply interface. But one class cannot extend multiple classes.
+
+interface It1{
+
+  void m1();
+
+}
+
+interface It2 extends It1{
+
+  void m2();
+  
+}
+
+interface It3 extends It1, It2{
+
+  void m3();
+  
+}
+
+class Test implements It3{
+
+  // override 3 methods
+  
+}
