@@ -276,3 +276,98 @@ class Test implements It3{
   // override 3 methods
   
 }
+
+Case 3- If multiple interfaces are having the common method, we can override that method once in the implemintation class.
+
+ex:
+
+interface It1{
+
+  void m1();
+
+  void m2();
+  
+}
+
+interface It2{
+
+  void m2();
+
+  void m3();
+  
+}
+
+interface It3{
+
+  void m4();
+  
+}
+
+class Test implements It3{
+
+  // override 4 methods
+  
+}
+
+Case 4- one class can implements multiple interfaces
+
+interface It1{
+
+  void m1();
+  
+}
+
+interface It2{
+
+  void m2();
+  
+}
+
+interface It3{
+
+  void m3();
+  
+}
+
+class Test implements It1, It2, It3{
+
+  // override 3 methods
+  
+}
+
+case 5- If one class implements multiple interfaces, if the multiple interfaces are having the common method then override that method once in the implemintation class.
+
+interface It1{
+
+  void m1();
+
+  void m2();
+  
+}
+
+interface It2{
+
+  void m2();
+
+  void m3();
+  
+}
+
+class Test implements It1, It2{
+
+  //override 3 methods
+  
+}
+
+
+1. One interface can extend another interface.
+
+2. One interface can extend multiple interfaces.
+
+3. One class can implement one interface.
+
+4. One class can implement multiple interfaces.
+
+
+
+
