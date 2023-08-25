@@ -219,3 +219,35 @@ class Test{
 ###### class implements interface
 
 ###### interface implements interface
+
+_______________________
+
+Case 1 - one interface can extend another interface
+
+ex:
+
+interface It1{
+
+  void m1();
+
+}
+
+interface It2 extends It1{
+
+  void m2();
+  
+}
+
+interface It3 extends It2{
+
+  void m3();
+  
+}
+
+class Test implements It3{
+
+  // override 3 methods
+  
+}
+
+
