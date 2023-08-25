@@ -141,3 +141,20 @@ We have 2 implemintation classes, so we took 2 methods. If we have 5 implemintat
 Note:
 
 If you take the argument as the child classes, while calling the method we can only pass that child type. If you take the argument as the parent classes, while calling the methods we can pass all child types.
+
+
+example - 
+
+class TestClient3{
+
+  static void info(Greeting impl){
+
+    TestClient2.info(new RatanImpl());
+
+    TestClient2.info(new RatanImpl());
+    
+  }
+  
+}
+
+- The method "info" will handle all the implemintation classes. "Greeting" is the parent class.
