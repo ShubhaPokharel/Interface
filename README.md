@@ -136,3 +136,8 @@ class TestClient2{
 
 
 We have 2 implemintation classes, so we took 2 methods. If we have 5 implemintation classes, we use 5 methods. If we want one method to handle all the implemintation classes, we can use "Greeting". "Greeting" is like the parent type for all the implemintation classes.
+
+
+Note:
+
+If you take the argument as the child classes, while calling the method we can only pass that child type. If you take the argument as the parent classes, while calling the methods we can pass all child types.
