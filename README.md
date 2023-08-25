@@ -18,7 +18,7 @@
 
 ###### class implements interface
 
-###### interface implements interface
+###### interface extends interface
 
 Example 1:
 
