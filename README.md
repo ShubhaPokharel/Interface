@@ -143,7 +143,7 @@ Note:
 If you take the argument as the child classes, while calling the method we can only pass that child type. If you take the argument as the parent classes, while calling the methods we can pass all child types.
 
 
-example - 
+example 3- 
 
 class TestClient3{
 
@@ -158,3 +158,64 @@ class TestClient3{
 }
 
 - The method "info" will handle all the implemintation classes. "Greeting" is the parent class.
+
+example 4:
+
+interface Operations{
+
+  void add(int num1, int num2, int num3);
+
+  void mul(int num1, int num2);
+   
+}
+
+abstract class Dev1 implements Operations{
+
+  public void add(int num1, int num2, int num3){
+
+    System.out.println(num1 + num2 + num3);
+    
+  }
+
+}
+
+class Dev2 extends Dev1{
+
+  void mul(int num1, int num2){
+
+    System.out.println(num1 * num2);
+    
+  }
+  
+}
+
+class Test{
+
+  public static void main(String[] args){
+
+    // Operations op = new Operations();  error: Operations is abstract; cannot be instaniated
+
+    // Dev1 d1 = new Dev1(); error: Dev1 is abstract; cannot be instaniated
+
+    Dev d2 = new Dev2();
+
+    d2.add(10,20,30);
+
+    d2.mul(30,60);
+    
+
+  }
+  
+}
+
+- Operations has 2 methods. "Dev1" is supposed to handle those 2 methods but it is only handling one method. Because it isnt handling those 2 methods, it is an incomplete class. So, we need to turn it into an abstract class. "Dev2" handles the other method.
+
+
+
+##### Quick remainder:
+
+###### class extends class
+
+###### class implements interface
+
+###### interface implements interface
