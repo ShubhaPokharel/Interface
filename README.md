@@ -20,7 +20,7 @@
 
 ###### interface extends interface
 
-Example 1:
+Example -
 
 interface Greeting{
 
@@ -66,7 +66,7 @@ class TestClient{
 }
 
 
-Example 2:
+Example -
 
 interface Greeting{
 
@@ -143,7 +143,7 @@ Note:
 If you take the argument as the child classes, while calling the method we can only pass that child type. If you take the argument as the parent classes, while calling the methods we can pass all child types.
 
 
-example 3- 
+example - 
 
 class TestClient3{
 
@@ -158,58 +158,6 @@ class TestClient3{
 }
 
 - The method "info" will handle all the implemintation classes. "Greeting" is the parent class.
-
-example 4:
-
-interface Operations{
-
-  void add(int num1, int num2, int num3);
-
-  void mul(int num1, int num2);
-   
-}
-
-abstract class Dev1 implements Operations{
-
-  public void add(int num1, int num2, int num3){
-
-    System.out.println(num1 + num2 + num3);
-    
-  }
-
-}
-
-class Dev2 extends Dev1{
-
-  void mul(int num1, int num2){
-
-    System.out.println(num1 * num2);
-    
-  }
-  
-}
-
-class Test{
-
-  public static void main(String[] args){
-
-    // Operations op = new Operations();  error: Operations is abstract; cannot be instaniated
-
-    // Dev1 d1 = new Dev1(); error: Dev1 is abstract; cannot be instaniated
-
-    Dev d2 = new Dev2();
-
-    d2.add(10,20,30);
-
-    d2.mul(30,60);
-    
-
-  }
-  
-}
-
-- Operations has 2 methods. "Dev1" is supposed to handle those 2 methods but it is only handling one method. Because it isnt handling those 2 methods, it is an incomplete class. So, we need to turn it into an abstract class. "Dev2" handles the other method.
-
 
 
 ##### Quick remainder:
@@ -370,4 +318,116 @@ class Test implements It1, It2{
 
 
 
+example :
 
+interface Operations{
+
+  void add(int num1, int num2, int num3);
+
+  void mul(int num1, int num2);
+   
+}
+
+abstract class Dev1 implements Operations{
+
+  public void add(int num1, int num2, int num3){
+
+    System.out.println(num1 + num2 + num3);
+    
+  }
+
+}
+
+class Dev2 extends Dev1{
+
+  void mul(int num1, int num2){
+
+    System.out.println(num1 * num2);
+    
+  }
+  
+}
+
+class Test{
+
+  public static void main(String[] args){
+
+    // Operations op = new Operations();  error: Operations is abstract; cannot be instaniated
+
+    // Dev1 d1 = new Dev1(); error: Dev1 is abstract; cannot be instaniated
+
+    Dev d2 = new Dev2();
+
+    d2.add(10,20,30);
+
+    d2.mul(30,60);
+    
+
+  }
+  
+}
+
+- Operations has 2 methods. "Dev1" is supposed to handle those 2 methods but it is only handling one method. Because it isnt handling those 2 methods, it is an incomplete class. So, we need to turn it into an abstract class. "Dev2" handles the other method.
+
+________________________
+
+1. We use abstraction in interfaces if the class. So, there is no diffrence between interfaces and abtstraction because we use abstraction in interfaes.
+
+Case 1-
+
+interfae Servlet{
+
+  //has 5 methods
+
+  init() service() destroy() gsi() gsc()
+  
+}
+
+- In case 1 we can override 5 methods. We will PROVIDE the implementations for the 5 methods.
+
+
+Case 2-
+
+interface Servlet{
+
+    init() service() destroy() gsi() gsc()
+    
+}
+
+abstract class GenericServlet implements Servlet{
+
+    init(){} service(); destroy(){} gsi(){} gsc(){}
+    
+}
+
+- In case 2, we have 5 methods in the interface. But, in the "GenericServlet" class it is only overriding 4 methods only. So, we make it an abstract class.
+
+  ##### Security Logics
+
+  Task - Lets say you want other classes to access your methods but only the classes that are extending your class.
+
+Ex:
+
+abstract class Ratan{
+
+  void secure(){
+
+    System.out.println("security code 7576");
+    
+  }
+
+}
+
+class Shubha extends Ratan{
+
+  public static void main(String[] args){
+
+    Shubha se = new Shubha();
+
+    se.secure();
+    
+  }
+  
+}
+
+This example is secure because the parent class is abstract. The only classes that can access the parent classes methods are the classes that are extending the parent class.
