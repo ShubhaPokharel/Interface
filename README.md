@@ -431,3 +431,5 @@ class Shubha extends Ratan{
 }
 
 This example is secure because the parent class is abstract. The only classes that can access the parent classes methods are the classes that are extending the parent class.
+
+
