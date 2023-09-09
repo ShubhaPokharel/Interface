@@ -441,6 +441,71 @@ When we are cloning, we will exception. Even if we handled the exception, we sti
 The Cloneable interface is the Marker interface. The Marker interface contains no methods, but our class gets some capabilites from the class.
 
 
+_________________
+
+package com.pnc.bank;
+
+interface Animal{
+
+	void swim();
+ 
+	void fly();
+ 
+}
+
+class Parrot implements Animal{
+
+	public void swim() {
+ 
+		System.out.println("parrot cant swim");
+  
+	}
+ 
+	public void fly() {
+ 
+		System.out.println("parrot can fly");
+  
+	}
+ 
+}
+
+class Penguin implements Animal{
+
+	public void swim() {
+ 
+		System.out.println("penguin can swim");
+  
+	}
+	public void fly() {
+ 
+		System.out.println("penguin cant fly");
+  
+	}
+}
+public class Practice {
+	
+	public static void animalInfo(Animal p) {
+ 
+		p.fly();
+  
+		p.swim();
+  
+	}
+
+	public static void main(String[] args) {
+ 
+
+		Practice.animalInfo(new Parrot());
+  
+		Practice.animalInfo(new Penguin());
+  
+
+	}
+
+}
+
+
+
 
 
 
