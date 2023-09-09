@@ -484,7 +484,7 @@ class Penguin implements Animal{
 }
 public class Practice {
 	
-	public static void animalInfo(Animal p) {
+	public static void animalInfo(Animal p) {      // Animal p = new Parrot();
  
 		p.fly();
   
@@ -503,6 +503,9 @@ public class Practice {
 	}
 
 }
+
+
+If we take the parent type, it can execute all child objects. Which ever object we execute, the 
 
 
 
