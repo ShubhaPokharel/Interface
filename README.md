@@ -432,4 +432,15 @@ class Shubha extends Ratan{
 
 This example is secure because the parent class is abstract. The only classes that can access the parent classes methods are the classes that are extending the parent class.
 
+## Cloning Process
+
+Cloning the object will take less time. Cloning is specific so we have to use a particular class name.
+
+When we are cloning, we will exception. Even if we handled the exception, we still get the exception. To completly handle the class, we use "implements Cloneable".
+
+The Cloneable interface is the Marker interface. The Marker interface contains no methods, but our class gets some capabilites from the class.
+
+
+
+
 
