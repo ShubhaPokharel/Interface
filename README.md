@@ -505,7 +505,9 @@ public class Practice {
 }
 
 
-If we take the parent type, it can execute all child objects. Which ever object we execute, the 
+If we take the parent type, it can execute all child objects. Which ever object we execute, the correspanding information will get executed.
+
+
 
 
 
